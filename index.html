@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			창의적 체험활동 '우리나라의 지도'
+		</title>
+		<meta charset="utf-8" />
+		<style>
+			.container{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				height: 200px;
+          	}
+			.mapcontainer{
+				position:absolute;
+			}
+			.rivermap{ 
+				display:none;
+			}
+			.mountainmap{ 
+				display:none;
+			}
+			.ldmap{ 
+				display:none;
+			}
+			.lnmap{ 
+				display:none;
+			} 
+			.river{
+				background-color: rgb(64, 118, 199);
+				width: 225px;
+				height: 100px;
+				font-size: 30px; 
+				color: white;
+				padding: 5px;
+				margin: 10px;
+			}
+			.mountain{
+				background-color: rgb(20, 63, 16);
+				width: 225px;
+				height: 100px;
+				font-size: 30px; 
+				color: white;
+				padding: 5px;
+				margin: 10px;
+			}			
+			.ld{
+				background-color: rgb(140, 77, 198);
+				width: 225px;
+				height: 100px;
+				font-size: 30px; 
+				color: white;
+              	padding: 5px;
+				margin: 10px;
+			}			
+			.ln{
+				background-color: rgb(209, 211, 56);
+				width: 225px;
+				height: 100px;
+				font-size: 30px; 
+				color: white;
+              	padding: 15px;
+				margin: 10px;
+			}
+			.contents{
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+			}
+		</style>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+		<script type="text/javascript">
+            $(document).ready(function(){
+				$(document).on('click', "button[class='river']", 
+				function(){
+					$('whitemap').toggle();
+					$('.rivermap').toggle();
+					$('.mountainmap').hide();
+					$('.ldmap').hide();
+					$('.lnmap').hide();
+				}); 
+			});
+			$(document).ready(function(){
+				$(document).on('click', "button[class='mountain']", 
+				function(){
+					$('whitemap').toggle();
+					$('.mountainmap').toggle();
+					$('.rivermap').hide();
+					$('.ldmap').hide();
+					$('.lnmap').hide();
+				}); 
+			});
+			$(document).ready(function(){
+				$(document).on('click', "button[class='ld']", 
+				function(){
+					$('whitemap').toggle();
+					$('.ldmap').toggle();
+					$('.mountainmap').hide();
+					$('.rivermap').hide();
+					$('.lnmap').hide();
+				}); 
+			});
+			$(document).ready(function(){
+				$(document).on('click', "button[class='ln']", 
+				function(){
+					$('whitemap').toggle();
+					$('.lnmap').toggle();
+					$('.mountainmap').hide();
+					$('.ldmap').hide();
+					$('.rivermap').hide();
+				}); 
+			});
+		</script>
+	</head>
+	<body>
+		<h1 class="headtext">
+			우리나라의 산과 강의 위치들을 공부해보자!
+		</h1>
+		<div class="contents">
+				<div class="whitemap">
+					<img src="https://postfiles.pstatic.net/MjAyMzExMDRfMiAg/MDAxNjk5MDg2MzExODgz.8cBltS3W0uooeRXEzodcUMvh0IvK9QdNhul5m0ss6uYg.11_j8T6Cyha9mNTBswEbq_R396cUJUJ6nukwNGjgSKQg.JPEG.ouioui1027/IMG_1420.jpg?type=w966" width="700px"/>
+				</div> 
+				<div class="mapcontainer">
+					<div class="rivermap"> 
+						<img src="https://postfiles.pstatic.net/MjAyMzExMDRfMjYx/MDAxNjk5MDg2MzExODk5.XhMCNOXfEoVV2u-tTxIFjRYqMyQetYAnjWaiZoiEbuwg.ksewPs6bAhgPYvDMUJ-ULOWDkmauHpqJCAjH7gtARxog.JPEG.ouioui1027/IMG_1425.jpg?type=w966" width="700px"/> 
+					</div>
+					<div class="mountainmap">
+						<img src="https://postfiles.pstatic.net/MjAyMzExMDRfMTE0/MDAxNjk5MDg2MzExODA0.iXp2FFwzJo8L1HxHuLRA_6bqHoViDKDmudR0gsBsjRYg.fQkrbZAK6GgRDD9hQj2qqKXQdkA2xXHAShLxgUW16Ycg.JPEG.ouioui1027/IMG_1426.jpg?type=w966" width="700px"/>
+					</div> 
+					<div class="ldmap" >
+						<img src="https://postfiles.pstatic.net/MjAyMzExMDRfMjY5/MDAxNjk5MDg2NDA4MDUy.9z6npgK5LfaDzV3lB7nzEFPWLMfmIG9zHflrq-g5AdYg.j61d7TCswpfVdOe21zDjXZttRsEliJN2W2n_4kO058Qg.JPEG.ouioui1027/IMG_1429.jpg?type=w966" width="700px"/> 
+					</div>
+					<div class="lnmap">
+						<img src="https://postfiles.pstatic.net/MjAyMzExMDRfMjEx/MDAxNjk5MDg2NDA4MDg3.mqLRLlROTItg_bQSdkbAglQ8B70-ouC8SnPihgSuYRQg.YAfLSWR_LqJTsIf4cV-QZGjc-oF7x0u0sFf_87Qm0Hsg.JPEG.ouioui1027/IMG_1428.jpg?type=w966" width="700px"/>
+					</div>
+				</div>
+			<div class="container" >
+				<button class="river">
+					강 보기
+				</button>
+				<button class="mountain">
+					산 보기
+				</button>
+				<button class="ld">
+					지역구분
+                	보기
+				</button>
+				<button class="ln">
+					지역이름
+					보기
+				</button>
+			</div>
+		</div>
+	</body>
+</html>
